@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use app\models\venda;
-use app\models\user;
+//use app\models\user;
 use Illuminate\Database\Seeder;
 
 class VendasSeeder extends Seeder
@@ -16,14 +16,12 @@ class VendasSeeder extends Seeder
     public function run()
     {
         //
-        User::all()
-         vendas::create([
-        'itens'=>'itens',
-        'datavendas'=>'10/01/20021',
-		'preçovendas'=>'11;00',
-		'desconto'=>'1;00',
-		'preço total'=>'10;00'
- ]);
+        $users = User::all();
+        foreach ($users as $user) {
+         vendas::factory(5)->create([
+            'user_id' =>$user-id
+        ]);
+        }
     }
 }
 

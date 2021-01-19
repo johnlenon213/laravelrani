@@ -20,7 +20,7 @@ class CreateVendasTable extends Migration
             $table->string('preçovendas');
             $table->string('desconto');
             $table->string('preço total');
- 
+            $table->string('itensvendidos')
             $table->timestamps();
         });
     }

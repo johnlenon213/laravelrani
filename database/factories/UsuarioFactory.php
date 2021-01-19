@@ -23,6 +23,12 @@ class UsuarioFactory extends Factory
     {
         return [
             //
+
+            'login' => $this->faker->word,
+            'senha' => $this->faker->radomDigit,
+            'cargo' => $this->faker->word,
+            'nivel de acesso'=> $this->faker->radomDigit,
+            'user_id' => $this->faker->radomDigit
         ];
     }
 }

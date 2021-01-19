@@ -15,12 +15,10 @@ class UsuarioSeeder extends Seeder
     public function run()
     {
         //
-        User::all()
-        usuario::create([
-        	'login'=>'john',
-        	'senha'=>'1234',
-        	'cargo'=>'fucionario',
-        	'user_id'=>1
+        $users = User::all();
+        foreach ($users as $user) {
+         usuario::factory(5)->create([
+            'user_id' =>$user-id
         ]);
     }
 }

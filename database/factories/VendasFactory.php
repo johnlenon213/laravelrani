@@ -23,6 +23,12 @@ class VendasFactory extends Factory
     {
         return [
             //
+            'itens' => $this->faker->word,
+            'datavendas' => $this->faker->radomDigit,
+            'preçovendas' => $this->faker->radomDigit,
+            'desconto' => $this->faker->radomDigit,
+            'preço total' =>$this->faker->radomDigit,
+            'itenvendidos' => $this->faker->radomDigit
         ];
     }
 }
