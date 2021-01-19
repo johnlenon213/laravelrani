@@ -28,7 +28,8 @@ class VendasFactory extends Factory
             'preçovendas' => $this->faker->radomDigit,
             'desconto' => $this->faker->radomDigit,
             'preço total' =>$this->faker->radomDigit,
-            'itenvendidos' => $this->faker->radomDigit
+            'itenvendidos' => $this->faker->radomDigit,
+            'user_id' => $this->faker->radomDigit
         ];
     }
 }

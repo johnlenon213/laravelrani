@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use app\models\venda;
-//use app\models\user;
+use App\Models\User;
+use App\Models\venda;
 use Illuminate\Database\Seeder;
 
 class VendasSeeder extends Seeder
@@ -19,7 +19,7 @@ class VendasSeeder extends Seeder
         $users = User::all();
         foreach ($users as $user) {
          vendas::factory(5)->create([
-            'user_id' =>$user-id
+            'user_id' =>$user->id
         ]);
         }
     }

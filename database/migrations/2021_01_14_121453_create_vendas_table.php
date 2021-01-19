@@ -21,6 +21,7 @@ class CreateVendasTable extends Migration
             $table->string('desconto');
             $table->string('preço total');
             $table->string('itensvendidos')
+            $table->integra('user_id'); 
             $table->timestamps();
         });
     }
